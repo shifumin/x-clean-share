@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "X Clean Share",
+  "version": "1.0.0",
+  "description": "Removes tracking parameters (s, t, etc.) from X/Twitter URLs when copied via the share button.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.twitter.com/*",
+        "https://mobile.x.com/*"
+      ],
+      "js": ["clean-clipboard.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
